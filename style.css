@@ -171,20 +171,20 @@ header nav ul {
 }
 
 .btn-explore {
-  background: #39ff14;
+  background: #58a6ff;
   color: #000;
 }
 
 .btn-newsletter {
   background: transparent;
   color: #fff;
-  border: 1.5px solid #39ff14;
+  border: 1.5px solid #58a6ff;
 }
 
 .btn-explore:hover,
 .btn-newsletter:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 15px #58a6ff;
 }
 
 
@@ -412,7 +412,7 @@ footer {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  background-color: rgb(161, 255, 20);
+  background-color: #58a6ff;
   border-radius: 30px;
   color: rgb(19, 19, 19);
   font-weight: 600;
@@ -435,7 +435,7 @@ footer {
 }
 
 .button:hover {
-  background-color: rgb(192, 255, 20);
+  background-color: #58a6ff;
   transition-duration: .5s;
 }
 
@@ -452,14 +452,14 @@ footer {
 .login-btn {
   margin-left: 1rem;
   background: #111;
-  color: rgb(161, 255, 20);
-  border: 2px solid rgb(161, 255, 20);
+  color: #ffffff;
+  border: 2px solid #2f81f7;
   border-radius: 20px;
   padding: 8px 18px;
   transition: 0.3s ease;
 }
 .login-btn:hover {
-  background: rgb(161, 255, 20);
+  background: #58a6ff;
   color: #000;
   transform: translateY(-2px);
 }
