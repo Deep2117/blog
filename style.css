@@ -1,4 +1,4 @@
-/* --- General Setup & Variables --- */
+
 :root {
     --bg-color: #0d1117;
     --primary-blue: #2f81f7;
@@ -46,7 +46,7 @@ a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s 
 a:hover { color: var(--text-primary); }
 section { padding: 5rem 0; }
 
-/* --- Buttons & Shared Components --- */
+
 .btn {
     padding: 0.75rem 1.5rem;
     border: none;
@@ -85,7 +85,7 @@ section { padding: 5rem 0; }
     margin: 0.5rem auto 0;
 }
 
-/* --- Header --- */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -106,29 +106,115 @@ header nav ul {
     gap: 2rem;
 }
 
-/* --- Hero Section --- */
+
 .hero {
-    text-align: center;
-    padding: 6rem 0;
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
 
-.hero h1 {
-    margin-bottom: 1rem;
+
+#heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.1);
+  z-index: -1;
 }
 
-.hero p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    font-size: 1.1rem;
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+  animation: fadeInUp 1.2s ease;
 }
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #bdbdbd;
+}
+
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-/* --- Featured Insights --- */
+.btn-explore,
+.btn-newsletter {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-explore {
+  background: #39ff14;
+  color: #000;
+}
+
+.btn-newsletter {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid #39ff14;
+}
+
+.btn-explore:hover,
+.btn-newsletter:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+
+
 .insights-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -165,7 +251,7 @@ header nav ul {
     border-radius: 8px;
 }
 
-/* --- Categories Section --- */
+
 .category-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -191,7 +277,7 @@ header nav ul {
     font-size: 0.9rem;
 }
 
-/* --- Testimonials Section --- */
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -232,7 +318,7 @@ header nav ul {
     font-size: 0.9rem;
 }
 
-/* --- CTA Section --- */
+
 .cta {
     background-color: var(--cta-bg);
     border-radius: 16px;
@@ -267,7 +353,7 @@ header nav ul {
     color: var(--text-secondary);
 }
 
-/* --- Footer --- */
+
 footer {
     padding-top: 4rem;
     border-top: 1px solid var(--border-color);
@@ -305,7 +391,7 @@ footer {
     color: var(--text-secondary);
 }
 
-/* --- Responsive Design --- */
+
 @media (max-width: 992px) {
     .insights-grid { grid-template-columns: 1fr; }
     .testimonial-grid { grid-template-columns: 1fr; }
@@ -317,4 +403,63 @@ footer {
     header { flex-direction: column; gap: 1rem; }
     header nav ul { padding: 0; }
     .category-grid { grid-template-columns: 1fr; }
+}
+ 
+.button {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.button:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+.login-btn {
+  margin-left: 1rem;
+  background: #111;
+  color: rgb(161, 255, 20);
+  border: 2px solid rgb(161, 255, 20);
+  border-radius: 20px;
+  padding: 8px 18px;
+  transition: 0.3s ease;
+}
+.login-btn:hover {
+  background: rgb(161, 255, 20);
+  color: #000;
+  transform: translateY(-2px);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 
     <div class="container">
         <header>
@@ -21,25 +24,46 @@
                     <li><a href="#Testimonials">Testimonials</a></li>
                 </ul>
             </nav>
-            <button class="btn btn-primary">Subscribe</button>
+            <a href="login.html">
+                <button class="login-btn">Login</button>
+            </a>
+
+
         </header>
 
         <main>
             <section class="hero">
-                <h1>Clarity in Creation.</h1>
-                <p>A curated space for modern design, development insights, and creative workflows. Join our community of builders.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">Explore Articles</button>
-                    <button class="btn btn-secondary">Join Newsletter</button>
+                <video autoplay muted loop playsinline id="heroVideo">
+                    <source src="assets/fe2f1082be08fd9115d47ec078b94839.mp4" type="video/mp4" />
+                </video>
+
+                <div class="hero-content">
+                    <h1>Clarity in Creation.</h1>
+                    <p>
+                        A curated space for modern design, development insights, and creative
+                        workflows. Join our community of builders.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="button">
+                            <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z">
+                                </path>
+                            </svg>
+                            Explore
+                        </button>
+                        <button class="btn-newsletter">Join Newsletter</button>
+                    </div>
                 </div>
             </section>
+
 
             <section id="Featured" class="featured-insights">
                 <h2>Featured Insights</h2>
                 <p class="section-subtitle">Hand-picked articles to spark your creativity.</p>
                 <div class="insights-grid">
                     <div class="card large-card">
-                        <div class="card-image-placeholder"></div>
+                        <div  class="card-image-placeholder"></div>
                     </div>
                     <div class="card">
                         <h3>Mastering React Hooks</h3>
@@ -47,7 +71,8 @@
                     </div>
                     <div class="card">
                         <h3>The Principles of Atomic Design</h3>
-                        <p>Learn how to build robust, scalable, and maintainable design systems from scratch using the atomic design methodology.</p>
+                        <p>Learn how to build robust, scalable, and maintainable design systems from scratch using the
+                            atomic design methodology.</p>
                     </div>
                     <div class="card">
                         <h3>The Art of Micro-interactions</h3>
@@ -84,7 +109,8 @@
                 <p class="section-subtitle">Building a community of passionate creators.</p>
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
-                        <p>"This blog has completely changed how I approach web design. The content is insightful, practical, and beautifully written."</p>
+                        <p>"This blog has completely changed how I approach web design. The content is insightful,
+                            practical, and beautifully written."</p>
                         <div class="author">
                             <div class="avatar"></div>
                             <div>
@@ -94,7 +120,8 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p>"This blog has completely changed how I approach web design. The content is insightful, practical, and beautifully written."</p>
+                        <p>"This blog has completely changed how I approach web design. The content is insightful,
+                            practical, and beautifully written."</p>
                         <div class="author">
                             <div class="avatar"></div>
                             <div>
@@ -104,7 +131,8 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p>"This blog has completely changed how I approach web design. The content is insightful, practical, and beautifully written."</p>
+                        <p>"This blog has completely changed how I approach web design. The content is insightful,
+                            practical, and beautifully written."</p>
                         <div class="author">
                             <div class="avatar"></div>
                             <div>
@@ -119,7 +147,8 @@
             <section class="cta">
                 <div class="cta-content">
                     <h2>Join 10,000+ Designers</h2>
-                    <p>Subscribe to our newsletter for the latest articles, resources, and insights delivered straight to your inbox.</p>
+                    <p>Subscribe to our newsletter for the latest articles, resources, and insights delivered straight
+                        to your inbox.</p>
                     <form id="subscribe-form">
                         <input type="email" placeholder="Enter your email address" required>
                         <button type="submit" class="btn btn-light">Subscribe Now</button>
@@ -159,4 +188,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
