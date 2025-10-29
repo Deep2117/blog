@@ -26,7 +26,7 @@
 .card-side::before {
   position: absolute;
   content: 'Log in';
-  left: -70px;
+  left: -69px;
   top: 0;
   width: 100px;
   text-decoration: underline;
