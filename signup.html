@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up | Blog</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <main class="page">
+    <form id="signupForm" class="card">
+      <h2 class="card-title">Create account</h2>
+
+      <div class="field">
+        <input id="fullname" name="fullname" type="text" placeholder="Full name" required />
+      </div>
+
+      <div class="field">
+        <input id="email" name="email" type="email" placeholder="E-mail" required />
+      </div>
+
+      <div class="field password-row">
+        <input id="password" name="password" type="password" placeholder="Password" minlength="6" required />
+        <button type="button" id="togglePwd" class="eye" aria-label="Show password">👁️</button>
+      </div>
+
+      <div class="field password-row">
+        <input id="confirm" name="confirm" type="password" placeholder="Confirm password" minlength="6" required />
+      </div>
+
+      <div class="small-note">
+        By creating an account you agree to our <a href="#">Terms</a>.
+      </div>
+
+      <button type="submit" class="primary-btn">Sign up</button>
+
+      <div class="or">Or sign up with</div>
+
+      <div class="socials">
+        <button type="button" class="social">G</button>
+        <button type="button" class="social"></button>
+        <button type="button" class="social">X</button>
+      </div>
+
+      <p class="foot">
+        Already have an account?
+        <a href="login.html">Log in</a>
+      </p>
+    </form>
+  </main>
+
+  <script>
+    // show/hide password
+    const toggle = document.getElementById('togglePwd');
+    const pwd = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      const t = pwd.type === 'password' ? 'text' : 'password';
+      pwd.type = t;
+      toggle.textContent = t === 'text' ? '🙈' : '👁️';
+    });
+
+    // basic validation: password match
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', (e) => {
+      const password = document.getElementById('password').value.trim();
+      const confirm = document.getElementById('confirm').value.trim();
+      if (password !== confirm) {
+        e.preventDefault();
+        alert('Passwords do not match.');
+        document.getElementById('confirm').focus();
+        return;
+      }
+      // replace below with actual signup call to backend
+      e.preventDefault();
+      alert('Signup submitted (demo). Replace with API call.');
+    });
+  </script>
+</body>
+</html>

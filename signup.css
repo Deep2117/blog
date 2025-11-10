@@ -1,0 +1,104 @@
+/* page reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Poppins", sans-serif; }
+html,body { height: 100%; background:#0f1113; }
+
+/* center page */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* card */
+.card {
+  width: 360px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.96));
+  border-radius: 30px;
+  padding: 34px;
+  box-shadow:
+    0 18px 30px rgba(2,10,18,0.65),
+    0 24px 36px rgba(57,197,255,0.06) inset;
+  text-align: center;
+  position: relative;
+}
+
+/* title */
+.card-title {
+  font-size: 32px;
+  color: #1b6bbf;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* input fields */
+.field { margin-bottom: 16px; position: relative; }
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 28px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(12,120,217,0.05);
+}
+
+/* small helper */
+.small-note {
+  font-size: 12px;
+  color: #6b7580;
+  text-align: left;
+  margin: 6px 6px 14px;
+}
+.small-note a { color:#1b6bbf; text-decoration:none; }
+
+/* password toggle */
+.password-row { display:flex; align-items:center; gap:8px; }
+.eye {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* primary button */
+.primary-btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #1f93df, #07b0d6);
+  box-shadow: 0 12px 22px rgba(7,176,214,0.18);
+  font-size: 16px;
+}
+
+/* or separator */
+.or { margin: 18px 0 12px; color:#99a2ab; font-size:13px; }
+
+/* social buttons */
+.socials { display:flex; gap:12px; justify-content:center; margin-bottom:12px; }
+.social {
+  width:44px; height:44px; border-radius:50%;
+  border:none; cursor:pointer;
+  background:#111; color:#fff; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  font-weight:700;
+}
+
+/* footer */
+.foot { font-size:13px; color:#6b7580; margin-top:12px; }
+.foot a { color:#1b6bbf; text-decoration:none; font-weight:600; }
+
+/* responsive */
+@media (max-width:420px){
+  .card { width: 92%; padding:28px; border-radius:22px; }
+  .card-title { font-size:26px; }
+}
